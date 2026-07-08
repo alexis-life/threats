@@ -10,16 +10,16 @@ export default function ThreatCard({ threat, activeTag, onTagClick }) {
   const displayDate = formatDate(date_added)
 
   return (
-    <article className="threat-card">
+    <article className="ax-card threat-card">
       <div className="threat-card-top">
         <div className="threat-card-heading">
-          <h2>{title}</h2>
-          {cve_id && <span className="cve-badge">{cve_id}</span>}
+          <h3>{title}</h3>
+          {cve_id && <span className="ax-badge cve-badge">{cve_id}</span>}
         </div>
-        {displayDate && <span className="threat-date">{displayDate}</span>}
+        {displayDate && <span className="ax-meta">{displayDate}</span>}
       </div>
 
-      {why_it_matters && <p className="threat-note">{why_it_matters}</p>}
+      {why_it_matters && <p>{why_it_matters}</p>}
 
       <div className="threat-card-bottom">
         {tags && tags.length > 0 && (
@@ -28,7 +28,7 @@ export default function ThreatCard({ threat, activeTag, onTagClick }) {
               <button
                 key={tag}
                 type="button"
-                className={`tag-chip${tag === activeTag ? ' active' : ''}`}
+                className={`ax-chip tag-chip${tag === activeTag ? ' is-active' : ''}`}
                 onClick={() => onTagClick(tag)}
               >
                 {tag}
@@ -38,7 +38,7 @@ export default function ThreatCard({ threat, activeTag, onTagClick }) {
         )}
 
         {link && (
-          <a className="source-link" href={link} target="_blank" rel="noreferrer">
+          <a className="ax-btn source-link" href={link} target="_blank" rel="noreferrer">
             Source
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />

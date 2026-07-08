@@ -1,0 +1,41 @@
+name: Refresh KEV snapshot
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch CISA KEV feed and build snapshot
+        run: |
+          curl -sf "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" -o /tmp/kev.json
+          node -e "
+            const fs = require('fs');
+            const raw = JSON.parse(fs.readFileSync('/tmp/kev.json', 'utf8'));
+            const vulnerabilities = raw.vulnerabilities
+              .sort((a, b) => b.dateAdded.localeCompare(a.dateAdded))
+              .slice(0, 20);
+            const snapshot = { fetchedAt: new Date().toISOString(), vulnerabilities };
+            fs.writeFileSync('src/data/kev-snapshot.json', JSON.stringify(snapshot, null, 2) + '\n');
+          "
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- src/data/kev-snapshot.json; then
+            echo "No changes to KEV snapshot"
+            exit 0
+          fi
+          git add src/data/kev-snapshot.json
+          git commit -m "Refresh KEV snapshot"
+          git push
