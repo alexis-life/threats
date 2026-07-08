@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Log4Shell",
+    "cve_id": "CVE-2021-44228",
+    "date_added": "2025-01-10",
+    "why_it_matters": "RCE via unauthenticated log input, near-ubiquitous impact",
+    "link": "https://nvd.nist.gov/vuln/detail/CVE-2021-44228",
+    "tags": "rce, java, logging"
+  },
+  {
+    "title": "MOVEit Transfer SQLi",
+    "cve_id": "CVE-2023-34362",
+    "date_added": "2025-02-14",
+    "why_it_matters": "Mass-exploited for data theft across hundreds of orgs",
+    "link": "https://nvd.nist.gov/vuln/detail/CVE-2023-34362",
+    "tags": "sqli, supply-chain"
+  }
+]
