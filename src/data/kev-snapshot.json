@@ -1,6 +1,36 @@
 {
-  "fetchedAt": "2026-07-27T14:27:24.268Z",
+  "fetchedAt": "2026-07-27T19:23:32.936Z",
   "vulnerabilities": [
+    {
+      "cveID": "CVE-2025-68686",
+      "vendorProject": "Fortinet",
+      "product": "FortiOS",
+      "vulnerabilityName": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+      "dateAdded": "2026-07-27",
+      "shortDescription": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-08-10",
+      "knownRansomwareCampaignUse": "Unknown",
+      "notes": "https://fortiguard.fortinet.com/psirt/FG-IR-25-934 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-68686",
+      "cwes": [
+        "CWE-200"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-16812",
+      "vendorProject": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "vulnerabilityName": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+      "dateAdded": "2026-07-27",
+      "shortDescription": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-07-30",
+      "knownRansomwareCampaignUse": "Unknown",
+      "notes": "https://www.arista.com/en/support/advisories-notices/security-advisory/24364-security-advisory-0144 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-16812",
+      "cwes": [
+        "CWE-78"
+      ]
+    },
     {
       "cveID": "CVE-2026-16232",
       "vendorProject": "Check Point",
@@ -271,36 +301,6 @@
       "notes": "https://www.icagenda.com/#download ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-48939",
       "cwes": [
         "CWE-434"
-      ]
-    },
-    {
-      "cveID": "CVE-2026-48908",
-      "vendorProject": "JoomShaper",
-      "product": "SP Page Builder",
-      "vulnerabilityName": "JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability",
-      "dateAdded": "2026-07-07",
-      "shortDescription": "JoomShaper SP Page Builder contains an unrestricted upload of file with dangerous type vulnerability that allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code.",
-      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "dueDate": "2026-07-10",
-      "knownRansomwareCampaignUse": "Unknown",
-      "notes": "https://extensions.joomla.org/extension/sp-page-builder/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-48908",
-      "cwes": [
-        "CWE-434"
-      ]
-    },
-    {
-      "cveID": "CVE-2026-55255",
-      "vendorProject": "Langflow",
-      "product": "Langflow",
-      "vulnerabilityName": "Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
-      "dateAdded": "2026-07-07",
-      "shortDescription": "Langflow contains an authorization bypass through user-controlled key vulnerability which allows an authenticated attacker to execute any flow belonging to another user by specifying the victim's flow ID in the request.",
-      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "dueDate": "2026-07-10",
-      "knownRansomwareCampaignUse": "Unknown",
-      "notes": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-qrpv-q767-xqq2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-55255",
-      "cwes": [
-        "CWE-639"
       ]
     }
   ]
