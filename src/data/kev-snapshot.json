@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-06T14:00:54.794Z",
+  "fetchedAt": "2026-08-06T23:55:49.743Z",
   "vulnerabilities": [
     {
       "cveID": "CVE-2026-63077",
@@ -37,7 +37,7 @@
       "product": "Tomcat",
       "vulnerabilityName": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
       "dateAdded": "2026-08-04",
-      "shortDescription": "Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor.",
+      "shortDescription": "Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor. This vulnerability can be chained with CVE‑2025‑24813.",
       "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
       "dueDate": "2026-08-07",
       "knownRansomwareCampaignUse": "Unknown",
